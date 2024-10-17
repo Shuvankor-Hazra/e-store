@@ -59,8 +59,13 @@ const Navbar = () => {
                         </div>
 
                         {/* Order-Button Section */}
-                        <button>
-                            <FaCartShopping />
+                        <button className="relative p-3">
+                            <FaCartShopping
+                                className="text-xl text-gray-600 dark:text-gray-400"
+                            />
+                            <div className="w-4 h-4 bg-red-500 text-white rounded-full absolute flex items-center justify-center text-xs top-0 right-0">
+                                4
+                            </div>
                         </button>
                         {/* Dark-Mode Section */}
                         <div></div>
