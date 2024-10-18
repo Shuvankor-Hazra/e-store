@@ -23,7 +23,7 @@ const Category2 = () => {
                             </div>
                         </div>
                         <img
-                            className="w-[250px] absolute top-1/2 -translate-y-1/2 -right-0"
+                            className="w-[250px] absolute top-1/2 -translate-y-1/2 right-2"
                             src={Image1} alt="" />
                     </div>
                     {/* Second col */}
