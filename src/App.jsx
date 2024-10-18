@@ -1,10 +1,11 @@
+import Headphone from "./assets/banner/headphone.png"
 import Banner from "./components/Banner/Banner"
 import Category from "./components/Category/Category"
 import Category2 from "./components/Category/Category2"
 import Hero from "./components/Hero/Hero"
 import Navbar from "./components/Navbar/Navbar"
+import Products from "./components/Products/Products"
 import Services from "./components/Services/Services"
-import Headphone from "./assets/banner/headphone.png"
 
 const BannerData = {
   discount: "30% OFF",
@@ -26,6 +27,7 @@ const App = () => {
       <Category2 />
       <Services />
       <Banner data={BannerData} />
+      <Products />
     </div>
   )
 }
