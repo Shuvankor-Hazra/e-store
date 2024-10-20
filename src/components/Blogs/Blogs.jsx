@@ -1,0 +1,62 @@
+import Img1 from '../../assets/blogs/blog-1.png';
+import Img2 from '../../assets/blogs/blog-2.png';
+import Img3 from '../../assets/blogs/blog-3.png';
+import Heading from "../Shared/Heading";
+
+const BlogData = [
+    {
+        id: 1,
+        title: "How to choose perfect smartwatch",
+        subTitle: "Compellingly fabricate sustainable functionalities vis-a-vis plug-and-play schemas. Globally reinvent out-of-the-box scenarios vis-a-vis diverse functionalities. Continually deliver flexible meta-services through exceptional.",
+        published: "Jan 20, 2024 by Dilshad",
+        image: Img1,
+    },
+    {
+        id: 2,
+        title: "How to choose perfect gadget",
+        subTitle: "Efficiently develop virtual synergy through turnkey paradigms. Efficiently redefine synergistic web-readiness whereas holistic applications. Professionally parallel task client-centered process improvements.",
+        published: "Jan 20, 2024 by Satya",
+        image: Img2,
+    },
+    {
+        id: 3,
+        title: "How to choose perfect VR headset",
+        subTitle: "Intrinsicly extend strategic relationships through holistic imperatives. Holisticly generate magnetic markets through customer directed customer service. Professionally engineer cross-unit niche.",
+        published: "Jan 20, 2024 by Sabir",
+        image: Img3,
+    },
+]
+
+const Blogs = () => {
+    return (
+        <div className='my-12'>
+            <div className="container">
+                {/* Header Section */}
+                <Heading title={"Recent News"} subTitle={"Explore Our Blogs"} />
+                {/* Blog Section */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-4 md:gap-7 gap-y-8">
+                    {/* Blog Cards */}
+                    {BlogData.map((data) => (
+                        <div
+                            className='bg-white dark:bg-gray-900'
+                            key={data.id}>
+                            {/* Image Section */}
+                            <div className='overflow-hidden rounded-2xl mb-2'>
+                                <img src={data.image} alt=""
+                                    className='w-full h-[220px] object-cover rounded-2xl hover:scale-105 duration-500' />
+                            </div>
+                            {/* Content Section */}
+                            <div className='space-y-2'>
+                                <p className='text-xs text-gray-500'>{data.title}</p>
+                                <p className='font-bold line-clamp-1'>{data.published}</p>
+                                <p className='line-clamp-2 text-sm text-gray-600 dark:text-gray-400'>{data.subTitle}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Blogs;

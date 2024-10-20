@@ -1,6 +1,7 @@
 import Headphone from "./assets/banner/headphone.png"
 import Smartwatch from "./assets/banner/smartwatch.png"
 import Banner from "./components/Banner/Banner"
+import Blogs from "./components/Blogs/Blogs"
 import Category from "./components/Category/Category"
 import Category2 from "./components/Category/Category2"
 import Hero from "./components/Hero/Hero"
@@ -40,6 +41,7 @@ const App = () => {
       <Banner data={BannerData} />
       <Products />
       <Banner data={BannerData2} />
+      <Blogs />
     </div>
   )
 }
