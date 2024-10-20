@@ -1,4 +1,5 @@
 import Headphone from "./assets/banner/headphone.png"
+import Smartwatch from "./assets/banner/smartwatch.png"
 import Banner from "./components/Banner/Banner"
 import Category from "./components/Category/Category"
 import Category2 from "./components/Category/Category2"
@@ -17,6 +18,16 @@ const BannerData = {
   title4: "Competently actualize interactive leadership vis-a-vis team driven informers. Compellingly enhance.",
   bgColor: "#f42c37",
 }
+const BannerData2 = {
+  discount: "30% OFF",
+  title: "Happy Hours",
+  date: "14 Jan to 28 Jan",
+  image: Smartwatch,
+  title2: "Smart Solo",
+  title3: "Winter Sale",
+  title4: "Competently actualize interactive leadership vis-a-vis team driven informers. Compellingly enhance.",
+  bgColor: "#2dcc6f",
+}
 
 const App = () => {
   return (
@@ -28,6 +39,7 @@ const App = () => {
       <Services />
       <Banner data={BannerData} />
       <Products />
+      <Banner data={BannerData2} />
     </div>
   )
 }
