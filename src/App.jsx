@@ -6,6 +6,7 @@ import Category from "./components/Category/Category"
 import Category2 from "./components/Category/Category2"
 import Hero from "./components/Hero/Hero"
 import Navbar from "./components/Navbar/Navbar"
+import Partners from "./components/Partners/Partners"
 import Products from "./components/Products/Products"
 import Services from "./components/Services/Services"
 
@@ -42,6 +43,7 @@ const App = () => {
       <Products />
       <Banner data={BannerData2} />
       <Blogs />
+      <Partners />
     </div>
   )
 }
