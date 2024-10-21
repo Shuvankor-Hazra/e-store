@@ -10,6 +10,7 @@ const BlogData = [
         subTitle: "Compellingly fabricate sustainable functionalities vis-a-vis plug-and-play schemas. Globally reinvent out-of-the-box scenarios vis-a-vis diverse functionalities. Continually deliver flexible meta-services through exceptional.",
         published: "Jan 20, 2024 by Dilshad",
         image: Img1,
+        aosDelay: "0"
     },
     {
         id: 2,
@@ -17,6 +18,7 @@ const BlogData = [
         subTitle: "Efficiently develop virtual synergy through turnkey paradigms. Efficiently redefine synergistic web-readiness whereas holistic applications. Professionally parallel task client-centered process improvements.",
         published: "Jan 20, 2024 by Satya",
         image: Img2,
+        aosDelay: "200"
     },
     {
         id: 3,
@@ -24,6 +26,7 @@ const BlogData = [
         subTitle: "Intrinsicly extend strategic relationships through holistic imperatives. Holisticly generate magnetic markets through customer directed customer service. Professionally engineer cross-unit niche.",
         published: "Jan 20, 2024 by Sabir",
         image: Img3,
+        aosDelay: "400"
     },
 ]
 
@@ -37,7 +40,8 @@ const Blogs = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-4 md:gap-7 gap-y-8">
                     {/* Blog Cards */}
                     {BlogData.map((data) => (
-                        <div
+                        <div data-aos="fade-up"
+                            data-aos-delay={data.aosDelay}
                             className='bg-white dark:bg-gray-900'
                             key={data.id}>
                             {/* Image Section */}

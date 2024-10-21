@@ -6,7 +6,7 @@ import Img5 from "../../assets/partners/partner-5.png"
 
 const Partners = () => {
     return (
-        <div className="py-8 mt-24 hidden md:block bg-gray-200 dark:bg-white/10">
+        <div data-aos="zoom-out" className="py-8 mt-24 hidden md:block bg-gray-200 dark:bg-white/10">
             <div className="container">
                 <div className="grid grid-cols-5 gap-4 place-items-center opacity-50">
                     <img src={Img1} alt=""

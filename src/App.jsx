@@ -1,12 +1,17 @@
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect, useState } from "react"
 import Headphone from "./assets/banner/headphone.png"
 import Smartwatch from "./assets/banner/smartwatch.png"
 import Banner from "./components/Banner/Banner"
 import Blogs from "./components/Blogs/Blogs"
 import Category from "./components/Category/Category"
 import Category2 from "./components/Category/Category2"
+import Footer from "./components/Footer/Footer"
 import Hero from "./components/Hero/Hero"
 import Navbar from "./components/Navbar/Navbar"
 import Partners from "./components/Partners/Partners"
+import Popup from "./components/Popup/Popup"
 import Products from "./components/Products/Products"
 import Services from "./components/Services/Services"
 
@@ -32,10 +37,26 @@ const BannerData2 = {
 }
 
 const App = () => {
+  const [orderPopup, setOrderPopup] = useState(false);
+
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+      offset: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-300 overflow-hidden ">
-      <Navbar />
-      <Hero />
+      <Navbar handleOrderPopup={handleOrderPopup} />
+      <Hero handleOrderPopup={handleOrderPopup} />
       <Category />
       <Category2 />
       <Services />
@@ -44,6 +65,8 @@ const App = () => {
       <Banner data={BannerData2} />
       <Blogs />
       <Partners />
+      <Footer />
+      <Popup orderPopup={orderPopup} handleOrderPopup={handleOrderPopup} />
     </div>
   )
 }

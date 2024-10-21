@@ -10,6 +10,8 @@ const ProductCard = ({ data }) => {
                 {/* Card Section */}
                 {data.map((data) => (
                     <div key={data.id}
+                        data-aos="fade-up"
+                        data-aos-delay={data.aosDelay}
                         className="group"
                     >
                         <div className="relative">
